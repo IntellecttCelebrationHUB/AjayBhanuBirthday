@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ajay Bhanu!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+        }
+
+        .animate-float {
+            position: fixed;
+            pointer-events: none;
+            animation: float linear infinite;
+            z-index: 5;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #ffffff, #fef08a, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .vibe-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .7; transform: scale(1.05); }
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        .celebration-bg {
+            transition: background-color 1s ease;
+        }
+
+        .is-celebrating {
+            background-color: #581c87 !important;
+        }
+    </style>
+</head>
+<body class="celebration-bg">
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <div id="floating-container"></div>
+
+    <main class="relative z-10 container mx-auto px-6 pt-12 pb-24 flex flex-col items-center">
+        
+        <!-- Decorative Header -->
+        <div class="flex items-center gap-2 mb-4 animate-bounce">
+            <svg class="w-5 h-5 text-yellow-400 fill-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg>
+            <span class="font-bold tracking-widest text-yellow-400">HAPPY BIRTHDAY CHAMP</span>
+            <svg class="w-5 h-5 text-yellow-400 fill-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg>
+        </div>
+
+        <!-- Header Text -->
+        <div class="text-center mb-12">
+            <h1 class="text-6xl md:text-8xl font-black gradient-text drop-shadow-2xl">
+                AJAY BHANU
+            </h1>
+            <div class="flex flex-wrap gap-4 mt-6 justify-center">
+                <div class="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm transition-transform hover:scale-110">
+                    <span class="text-emerald-400"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></span>
+                    <span class="text-sm font-bold uppercase tracking-tight">Ace Cricketer</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm transition-transform hover:scale-110">
+                    <span class="text-purple-400"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.934a.5.5 0 0 0-.777-.416L16 11"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg></span>
+                    <span class="text-sm font-bold uppercase tracking-tight">Content Creator</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm transition-transform hover:scale-110">
+                    <span class="text-yellow-400"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.5a2.5 2.5 0 0 1 0-5"></path><path d="m14 19-2-5h-2l-2 5"></path><path d="M9 14h2"></path><path d="M16 14.5a2.5 2.5 0 0 0 0-5"></path><path d="M20 9.5a2.5 2.5 0 0 1 0 5"></path><path d="M12 3v13"></path></svg></span>
+                    <span class="text-sm font-bold uppercase tracking-tight">Vibe Master</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Central Image -->
+        <div class="relative group cursor-pointer" onclick="handleCelebrate()">
+            <div class="absolute -inset-4 bg-gradient-to-r from-purple-600 via-pink-500 to-emerald-500 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 vibe-pulse"></div>
+            
+            <div class="relative bg-slate-900 rounded-2xl p-2 overflow-hidden w-72 h-72 md:w-96 md:h-96 shadow-2xl transition-all duration-500 group-hover:rotate-2">
+                <img 
+                    src="./Ajay.jpeg" 
+                    alt="Ajay Bhanu"
+                    id="profile-img"
+                    class="w-full h-full object-cover rounded-xl"
+                    onerror="this.src='https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=800'"
+                />
+                
+                <!-- Vibe Meter -->
+                <div class="absolute bottom-4 left-4 right-4 h-2 bg-white/10 rounded-full overflow-hidden backdrop-blur-md">
+                    <div id="vibe-meter" class="h-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 transition-all duration-300" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <div class="absolute -top-6 -right-6 bg-yellow-400 text-black px-6 py-2 rounded-full font-black transform rotate-12 shadow-2xl border-4 border-slate-950 animate-bounce">
+                IT'S PARTY TIME! 🥳
+            </div>
+            <div class="absolute -bottom-4 -left-6 bg-purple-500 text-white px-6 py-2 rounded-full font-black transform -rotate-12 shadow-2xl border-4 border-slate-950 vibe-pulse">
+                LEGEND LEVEL 🔥
+            </div>
+        </div>
+
+        <!-- Message Card -->
+        <div class="mt-20 max-w-3xl w-full text-center space-y-12">
+            <div class="relative p-10 bg-slate-900/40 border border-white/10 rounded-[3rem] backdrop-blur-xl overflow-hidden shadow-2xl">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+                
+                <h3 class="text-4xl font-black mb-6 text-white uppercase tracking-tighter italic">
+                    Keep The Vibe <span class="text-purple-400">Infinite</span>
+                </h3>
+                
+                <p class="text-slate-300 leading-relaxed text-xl font-medium">
+                    To the guy who makes cricket look easy, content look viral, and life look like one big celebration. 
+                    Ajay, may your new year be filled with straight drives, trending clips, and non-stop energy!
+                </p>
+                
+                <button 
+                    onclick="handleCelebrate()"
+                    class="mt-10 group relative px-12 py-5 bg-gradient-to-br from-yellow-400 to-orange-500 text-black font-black rounded-full transition-all transform hover:scale-110 active:scale-95 shadow-[0_0_30px_rgba(255,165,0,0.4)] flex items-center gap-3 mx-auto"
+                >
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.8 11.3 2 22l10.7-3.8"></path><path d="M4 3h.01"></path><path d="M22 8h.01"></path><path d="M15 2h.01"></path><path d="M22 20h.01"></path><path d="m22 2-12.4 12.4"></path><path d="M7 7h.01"></path></svg>
+                    TRIGGER CELEBRATION
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white/5 border border-white/10 p-6 rounded-3xl">
+                    <div class="text-xs uppercase text-slate-500 font-bold mb-1 tracking-widest text-center">Vibe Check</div>
+                    <div class="text-xl font-black text-center">100%</div>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-6 rounded-3xl">
+                    <div class="text-xs uppercase text-slate-500 font-bold mb-1 tracking-widest text-center">Strike Rate</div>
+                    <div class="text-xl font-black text-center">Infinite</div>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-6 rounded-3xl">
+                    <div class="text-xs uppercase text-slate-500 font-bold mb-1 tracking-widest text-center">Viral Views</div>
+                    <div class="text-xl font-black text-center">Millions</div>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-6 rounded-3xl">
+                    <div class="text-xs uppercase text-slate-500 font-bold mb-1 tracking-widest text-center">Energy</div>
+                    <div class="text-xl font-black text-center">Full</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Confetti logic
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animationId;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function createConfetti() {
+            particles = [];
+            for (let i = 0; i < 150; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: canvas.height + Math.random() * 100,
+                    r: Math.random() * 6 + 2,
+                    d: Math.random() * 150,
+                    color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+                    tilt: Math.random() * 10 - 10,
+                    tiltAngleIncremental: Math.random() * 0.07 + 0.05,
+                    tiltAngle: 0
+                });
+            }
+        }
+
+        function drawConfetti() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach((p, i) => {
+                p.tiltAngle += p.tiltAngleIncremental;
+                p.y -= (Math.cos(p.d) + 3 + p.r / 2) / 2;
+                p.tilt = Math.sin(p.tiltAngle) * 15;
+
+                ctx.beginPath();
+                ctx.lineWidth = p.r;
+                ctx.strokeStyle = p.color;
+                ctx.moveTo(p.x + p.tilt + p.r / 4, p.y);
+                ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 4);
+                ctx.stroke();
+
+                if (p.y < -10) {
+                    particles[i].y = canvas.height + 10;
+                    particles[i].x = Math.random() * canvas.width;
+                }
+            });
+            animationId = requestAnimationFrame(drawConfetti);
+        }
+
+        function handleCelebrate() {
+            document.body.classList.add('is-celebrating');
+            createConfetti();
+            if (!animationId) drawConfetti();
+            setTimeout(() => {
+                document.body.classList.remove('is-celebrating');
+            }, 3000);
+        }
+
+        // Initialize floating icons
+        const emojis = ["🏏", "🎥", "🎂", "✨", "🔥", "🎬", "🏆"];
+        const container = document.getElementById('floating-container');
+        for (let i = 0; i < 15; i++) {
+            const div = document.createElement('div');
+            div.className = 'animate-float';
+            div.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            div.style.left = Math.random() * 100 + '%';
+            div.style.animationDelay = Math.random() * 5 + 's';
+            div.style.animationDuration = (10 + Math.random() * 10) + 's';
+            container.appendChild(div);
+        }
+
+        // Initialize Vibe Meter
+        window.onload = () => {
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            
+            let vibe = 0;
+            const meter = document.getElementById('vibe-meter');
+            const interval = setInterval(() => {
+                vibe += 2;
+                meter.style.width = vibe + '%';
+                if (vibe >= 100) {
+                    clearInterval(interval);
+                    handleCelebrate(); // Auto-fire on load
+                }
+            }, 30);
+        };
+    </script>
+</body>
+</html>
